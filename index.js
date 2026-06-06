@@ -157,7 +157,6 @@ function NewGame() {
 }
 
 function ProgressGame() {
-    console.log(passed_players)
     document.getElementById("current_p").innerHTML = "Player " + player + "/" + player_count;
 
 
