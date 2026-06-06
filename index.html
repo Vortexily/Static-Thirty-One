@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThirtyOne</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="setup"> 
+        <div class="div1">
+            <h1>Enter game code...</h1>
+            <input type="text" id="code_input" />
+            <button id="submit_code" type="button"> Decode </button>
+        </div>
+        <div class="div2">
+            <h1>...Or start a new game</h1>
+            <label for="player_count"> How many players? </label>
+            <input type="number" id="player_count" min="2" max="8" value="2"/>
+            <br>
+            <button id="new_game" type="button"> Start new game </button>
+            <p> </p>
+        </div>
+    </div>
+    
+    <div id="game_window">
+        <button class="reload" id="reload1" type="button"> ⟳ </button>
+        <div id="board_info">
+            <p id="current_p">Player ?</p>
+            <p id="turn_info">Take your turn</p>
+        </div>
+        <p class="card_title">Table:</p>
+        <div class="card_window">
+            
+            <div>
+                <label id="tc_1_t" for="tc_1">1</label>
+                <input type="radio" name="tc" id="tc_1" value="tc_1" />
+                
+            </div>
+
+            <div>
+                <label id="tc_2_t" for="tc_2">2</label>
+                <input type="radio" name="tc" id="tc_2" value="tc_2" />
+            </div>
+
+            <div>
+                <label id="tc_3_t" for="tc_3">3</label>
+                <input type="radio" name="tc" id="tc_3" value="tc_3" />
+                
+            </div>
+        </div>
+        <p id="hand" class="card_title">Your hand:</p>
+        <div id="hand2" class="card_window"> 
+            <div>
+                <label id="h_1_t" for="h_1">1</label>
+                <input type="radio" name="hc" id="h_1" value="h_1" />
+            </div>
+
+            <div>
+                <label id="h_2_t" for="h_2">2</label>
+                <input type="radio" name="hc" id="h_2" value="h_2" />
+            </div>
+
+            <div>
+                <label id="h_3_t" for="h_3">3</label>
+                <input type="radio" name="hc" id="h_3" value="h_3" />
+            </div>
+        </div>
+    <div id="options">
+        <button id="swap" type="button" title="Select two cards to swap them!" disabled> Swap </button>
+        <button id="pass" type="button"> Pass </button>
+    </div>
+    
+    </div>
+
+    <dialog id="end_screen">
+        <div>
+            <button class="reload" id="reload2" type="button"> ⟳ </button>
+            <h1>Your score:</h1>
+            <h2 id="score">..</h2>
+        </div>
+        <div>
+            <h2 id="next_player"> Code for the next player: </h2>  
+            <label for="copy_code" id="code_output"> ... </label>
+            <button id="copy_code" type="button"> Copy </button>
+        </div>
+    </dialog>
+    <dialog id="final_scores">
+        <button class="reload" id="reload3" type="button"> ⟳ </button>
+        <h1>Game ended!</h1>
+        <h4 id="scores_text">...</h4>
+        <h2 id="winner">...</h2>
+        
+    </dialog>
+</body>
+<script src="index.js"></script>
+</html>

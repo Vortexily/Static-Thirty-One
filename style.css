@@ -1,0 +1,177 @@
+.dongle-regular {
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --main_light: #dadfda;
+  --main_dark:#151514;
+  --red: #771335;
+  --background: #587970;
+  --background2: #33433e;
+}
+
+* {
+    font-family: Dongle, sans-serif;
+    border-radius: 25px;
+}
+
+body {
+    background-color: var(--main_dark);
+    color: var(--main_light);
+    text-align: center;
+    font-size: x-large;
+    min-width: 758px;
+}
+
+#setup, #board_info {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+#game_window {
+  padding: 1%;
+  background: linear-gradient(to bottom, var(--background) 0%, var(--background2) 100%);
+  margin: 1%;
+  box-shadow: 4px 8px 33px 12px #00000078;
+  color: #dadfda;
+  font-size: x-large;
+}
+.card_window {
+display: grid;
+background-color: #151514;
+color: #151514;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+
+margin: auto;
+width: 50%;
+padding-top: 1%;
+padding-bottom: 1%;
+box-shadow: 4px 8px 33px 12px #00000078;
+}
+
+#hand, #hand2 {
+  background-color: var(--red);
+}
+
+.card_window > div {
+  background-color: #dadfda;
+  margin: auto;
+  max-width: fit-content;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 4px 8px 33px 12px #00000078;
+  font-size: xx-large;
+  line-height: 70%;
+}
+
+.card_title {
+  background-color: #151514;
+
+  max-width: 200px;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 4px 8px 33px 12px #00000078;
+}
+
+#board_info > p {
+  border: 5px double var(--main_light);
+  color: var(--main_light);
+  padding-left: 4%;
+  padding-right: 4%;
+  margin: auto;
+}
+
+button {
+  transform-origin: center;
+  font-size: larger;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 1%;
+  cursor:pointer;
+  border: none;
+  background-color: var(--main_light);
+  
+}
+
+button:hover {
+  background-color: var(--red);
+  color: #dadfda;
+}
+
+button:active {
+  background-color: var(--red);
+  transform: rotate(5deg);
+}
+
+button[disabled]:hover {
+  background-color: #dadfda89;
+}
+
+input[type="radio"] {
+  width: 2em;
+  height: 2em;
+  accent-color: var(--red);
+  cursor:pointer;
+  
+}
+
+input[type="text"], input[type="number"] {
+  border: none;
+  min-width: 40px;
+  min-height: 30px;
+  background: linear-gradient(27deg, var(--background) 0%, var(--background2) 100%);
+  font-size: x-large;
+  text-align: center;
+  margin: 3%;
+
+}
+
+dialog {
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 10%;
+  width: 50%; 
+  height: auto; 
+  border: none;
+  padding-bottom: 5%;
+  background-color: var(--main_dark);
+  color: var(--main_light);
+  box-shadow: 4px 8px 33px 12px #00000078;
+  word-wrap: break-word;
+}
+
+#options > button {
+  height: 70px;
+  width: 200px;
+  margin: 5%;
+}
+
+h1, h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.reload {
+  background-color: rgba(95, 158, 160, 0);
+  color: var(--main_light);
+  font-weight: 900;
+  font-size: xx-large;
+  position: absolute;
+  right: 10px;
+
+}
+
+.reload:hover, .reload:active {
+  background-color: rgba(95, 158, 160, 0);
+  color: var(--red);
+  position: absolute;
+}
